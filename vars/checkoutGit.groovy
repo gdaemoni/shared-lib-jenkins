@@ -1,10 +1,6 @@
 #!groovy
 
-def call(Map argc) {
-	def url = argc.url
-	def branch = args.branch
-	def credentialsId = args.credentialsId
-
+def call(def url, def branch = "master", def credentialsId = "") {
 	return {
 		stage ("checkout ${br}") {
 			steps {

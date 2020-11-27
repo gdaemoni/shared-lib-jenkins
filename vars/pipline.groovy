@@ -11,16 +11,17 @@ def call(body) {
 
 	stages {
 		stage('print config') {
-			echo "${pipelineParams.supertest}"
+			steps {
+				echo "${pipelineParams.supertest}"
+			}
 		}
-	
     	stage('Build') {
 			steps {
 				script {
 					echo "test"
-          }
-        }
-      }
+        		}
+        	}
+    	}
     }
   }
 }

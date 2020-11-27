@@ -9,7 +9,9 @@ def call(Map config) {
 	stages {
 		stage('print config') {
 			steps {
-				echo "${config.body}"
+				print(config.test)
+				sh "echo ${config.test}"
+				echo "${config.test}"
 			}
 		}
     	stage('Build') {

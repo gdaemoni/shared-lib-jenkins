@@ -11,7 +11,7 @@ def call(Map config) {
 			steps {
 				git url: config.url,
 					branch: config.branch,
-					credentailsId: config.credentialsId
+					credentialsId: config.credentialsId
 			}
 		}
     	stage('Build') {

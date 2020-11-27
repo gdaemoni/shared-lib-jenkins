@@ -1,8 +1,8 @@
 #!groovy
 
-def call(Map args) {
+def call(Map argc) {
 	def url = argc.url
-	def br = args.branch
+	def branch = args.branch
 	def credentialsId = args.credentialsId
 
 	return {

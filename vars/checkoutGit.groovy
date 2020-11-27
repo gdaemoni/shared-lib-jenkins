@@ -9,7 +9,5 @@ def call(body) {
 
 	echo "texxxxt"
 	
-	git url: config.url,
-		branch: config.branch,
-		credentialsId: config.credentialsId
+	checkout scm
 }

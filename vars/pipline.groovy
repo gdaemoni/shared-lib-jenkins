@@ -7,11 +7,9 @@ def call(Map config) {
     agent any
 
 	stages {
-		stage('print config') {
+		stage('checkout') {
 			steps {
-				print(config.test)
-				sh "echo ${config.test}"
-				echo "${config.test}"
+				git url: config.url
 			}
 		}
     	stage('Build') {

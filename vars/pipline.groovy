@@ -9,7 +9,9 @@ def call(Map config) {
 	stages {
 		stage('checkout') {
 			steps {
-				git url: config.url
+				git url: config.url,
+					branch: config.branch,
+					credentailsId: config.credentialsId
 			}
 		}
     	stage('Build') {

@@ -1,10 +1,7 @@
 #!groovy
 
-def call(body) {
-	def pipelineParams= [:]
-	body.resolveStrategy = Closure.DELEGATE_FIRST
-	body.delegate = pipelineParams
-	body()
+def call(Map config) {
+
 
 	pipeline {
     agent any
@@ -12,7 +9,7 @@ def call(body) {
 	stages {
 		stage('print config') {
 			steps {
-				echo "${pipelineParams.supertest}"
+				echo "${config.body}"
 			}
 		}
     	stage('Build') {

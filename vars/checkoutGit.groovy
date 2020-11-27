@@ -7,9 +7,11 @@ def call(Map args) {
 
 	return {
 		stage ("checkout ${br}") {
-			git url: url
-				branch: branch
-				credentialsId: credentialsId
+			steps {
+				git url: url
+					branch: branch
+					credentialsId: credentialsId
+			}
 		}
 	}
 }

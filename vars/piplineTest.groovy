@@ -8,7 +8,7 @@ def call(body) {
     body()
 
 
-	stage {
+	stage ('www') {
 		echo pipelineParams.branch
 	}
 	// pipeline {
